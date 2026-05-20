@@ -1,50 +1,55 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# 诸天音综系统 Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. 先服务个人创作，不急于产品化
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+所有设计决策优先服务于个人创作者的流程跑通，而非面向多用户产品。功能选择以"我自己能不能用"为第一判断标准。
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. 先跑通最小闭环 A+B+D
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+先跑通三大核心：内容工厂（A）、IP 宇宙（B）、个人创作系统（D）。在最小闭环被验证之前，不扩展到商业化、多租户、平台化。
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. 先做单角色内容包，再做多角色组合
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+角色内容包是最小核心资产。任何一个角色包必须能独立产出小说、歌曲、MV、短视频切片。在单个角色包未验证前，不做多角色的 Battle 或综艺。
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. 小说是叙事入口，音乐和视频是传播出口，综艺是长期组织形式
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+内容形态有明确分工：小说用于建立世界观和角色深度，音乐和视频用于社交传播和短反馈，综艺用于长期运营和角色组合。
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### V. 所有角色必须尊重底层精神
+
+不恶搞正向人物，不扭曲角色的精神内核，不做对历史/神话人物的低俗改编。遇到不确定的边界，以尊重为默认选择。
+
+### VI. 所有昂贵生成动作之前必须先完成文字确认
+
+文本阶段（方案、歌词、视觉设定、分镜）必须通过人工审核后，才能进入音频/图像/视频生成阶段。这是一条不可绕过的质量门禁。
+
+### VII. 所有流程都要沉淀为模板、资产库和可复用规则
+
+每一次创作不能是一次性的。角色包模板、导演桥段模板、提示词、失败案例都必须在流程中沉淀下来，确保第二个角色能复用 80% 以上的结构。
+
+## Quality Gates
+
+以下节点必须先通过人工审核才能继续：
+
+1. **文本审批** — 角色内容包、小说化入口
+2. **歌词审批** — 歌词方案、Suno 提示
+3. **视觉审批** — 视觉设定、角色形象锚点
+4. **分镜审批** — 分镜脚本、镜头序列
+5. **合规审批** — 版权风险、平台风险、价值观风险
+
+## Development Workflow
+
+- 新功能必须先写 spec，再写 plan，再拆 tasks
+- 使用 speckit 工作流：`specify → clarify → plan → tasks → implement`
+- 代码仓库结构保持 `framework/`（设计文档）、`specs/`（功能规格）、`outputs/`（产出物）三层分离
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- 本 Constitution 是项目最高原则文件，所有设计决策、PR、代码审查必须以本文件为准则
+- 修改 Constitution 需要文档记录、至少一次内部讨论、并同步更新 `framework/README.md` 的基本原则
+- 所有 agent 在操作本仓库时应先阅读本 Constitution 和 `framework/README.md`
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 0.1.0 | **Ratified**: 2026-05-20 | **Last Amended**: 2026-05-20
