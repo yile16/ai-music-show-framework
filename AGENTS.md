@@ -10,7 +10,7 @@
 
 ```
 framework/              ← 框架设计文档（源）
-  modules/              ← 8 个核心模块
+  modules/              ← 10 个核心模块
     01-world-system.md
     02-character-package.md
     03-director-system.md
@@ -19,13 +19,17 @@ framework/              ← 框架设计文档（源）
     06-business-later.md
     07-external-tools-integration.md  ← 工具与服务集成计划书
     08-quality-review.md             ← 框架质量评估系统（评级 Agent）
-  templates/            ← 4 个可复用模板
+    09-narrative-engine.md           ← 叙事引擎（五拍弧线）
+    10-audience-system.md            ← 观众与社区系统
+  templates/            ← 5 个可复用模板
     character-package-template.md
     director-beat-template.md
     episode-package-template.md
     system-settlement-template.md
-  operations/           ← 路线图
+    iteration-log-template.md        ← 内容迭代日志
+  operations/           ← 运营文档
     roadmap.md
+    risk-register.md                 ← 风险登记册
 
 specs/                  ← 功能规格（speckit 工作流）
   001-ai-music-mv-workflow/
