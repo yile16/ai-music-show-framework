@@ -10,13 +10,14 @@
 
 ```
 framework/              ← 框架设计文档（源）
-  modules/              ← 6 个核心模块
+  modules/              ← 7 个核心模块
     01-world-system.md
     02-character-package.md
     03-director-system.md
     04-production-pipeline.md
     05-agent-map.md
     06-business-later.md
+    07-external-tools-integration.md  ← 工具与服务集成计划书
   templates/            ← 4 个可复用模板
     character-package-template.md
     director-beat-template.md
@@ -31,7 +32,34 @@ specs/                  ← 功能规格（speckit 工作流）
 
 outputs/                ← 实际产出物
   characters/           ← 角色内容包实例
+    sun-wukong/         ← 孙悟空角色包（已填写）
+    _template/          ← 空白模板副本
+
+.claude/skills/         ← 外部 AI 技能（待安装）
+    evolink-media/      ← 一站式媒体生成 API（60+ 模型）
+    ai-music-video/     ← 端到端 MV 合成
+    evolink-music/      ← Suno 音乐生成
+    evolink-video/      ← 视频生成
 ```
+
+## 工具与服务
+
+### 已规划的外部工具（详见模块 07）
+
+| 工具 | 用途 | 状态 |
+|------|------|------|
+| evolink-media | 统一 API 网关（音乐/图片/视频） | 计划安装 |
+| ai-music-video | MV 合成（Suno + ffmpeg） | 计划安装 |
+| evolink-music | Suno v5 音乐生成 | 按需安装 |
+| evolink-video | 图→视频生成 | 按需安装 |
+| storyboard-consistent-character | 角色一致性架构参考 | GitHub 研究 |
+
+### AI 模型能力（API 层）
+
+- **音乐**：Suno v5, Suno v4.5
+- **图片**：Flux, Seedream, GPT Image
+- **视频**：Kling 3.0, Seedance, Veo 3, Sora
+- **合成**：ffmpeg + SRT 字幕
 
 ## 工作约定
 
@@ -39,3 +67,4 @@ outputs/                ← 实际产出物
 - 先在 `framework/templates/` 找是否有现成模板可用
 - 昂贵生成动作前必须先过文字审核门禁
 - 所有产出物放到 `outputs/` 下对应目录
+- 使用外部工具前，查阅 `framework/modules/07-external-tools-integration.md` 确认对应环节的推荐工具
