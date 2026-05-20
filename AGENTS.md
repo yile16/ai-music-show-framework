@@ -10,7 +10,7 @@
 
 ```
 framework/              ← 框架设计文档（源）
-  modules/              ← 7 个核心模块
+  modules/              ← 8 个核心模块
     01-world-system.md
     02-character-package.md
     03-director-system.md
@@ -18,6 +18,7 @@ framework/              ← 框架设计文档（源）
     05-agent-map.md
     06-business-later.md
     07-external-tools-integration.md  ← 工具与服务集成计划书
+    08-quality-review.md             ← 框架质量评估系统（评级 Agent）
   templates/            ← 4 个可复用模板
     character-package-template.md
     director-beat-template.md
